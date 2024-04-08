@@ -1,5 +1,5 @@
 final: main.o showMenu.o showMainMenu.o structDefinitions.o
-	gcc -o final.exe main.o showMenu.o showMainMenu.o structDefinitions.o
+	gcc -o final.exe structDefinitions.o main.o showMenu.o showMainMenu.o
 
 main.o: main.c
 	gcc -c main.c

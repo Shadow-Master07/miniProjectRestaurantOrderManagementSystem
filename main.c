@@ -7,8 +7,6 @@
 #include "include/lib/showMenu.h"
 #include "include/lib/structDefinitions.h"
 
-int orderID = 1;
-
 int main()
 {
     orderList *orderHead = NULL;

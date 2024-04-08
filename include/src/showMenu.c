@@ -10,3 +10,5 @@ void showMenu()
     printf("4. Masala Dosa \n");
     printf("5. Chips \n");
 }
+
+// char items[20][20] = {"Burger", "Pizza", "Colddrink", "Masala Dosa", "Chips", "\0"};

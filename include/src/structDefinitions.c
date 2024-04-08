@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
+
+#include "./../lib/showMenu.h"
 #include "./../lib/structDefinitions.h"
 
 orderList *addOrder(orderList *orderHead, int *orderId)
@@ -61,7 +64,7 @@ orderList *deleteOrder(orderList *head)
     while (toDeleteDish != NULL)
     {
         tempDishDelete = toDeleteDish->next;
-        printf("Dish %s completed\n", toDeleteDish->dishNameNo);
+        printf("Dish %d completed\n", toDeleteDish->dishNameNo);
         free(toDeleteDish);
         toDeleteDish = tempDishDelete;
     }

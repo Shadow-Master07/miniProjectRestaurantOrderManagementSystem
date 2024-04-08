@@ -4,8 +4,6 @@
 #include "./../lib/showMenu.h"
 #include "./../lib/structDefinitions.h"
 
-int orderID = 1;
-
 orderList *addOrder(orderList *orderHead, int *orderId)
 {
     orderList *newOrder = (orderList *)malloc(sizeof(orderList));

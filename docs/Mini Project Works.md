@@ -48,7 +48,7 @@ typedef struct order
 ## Extra:
 1. Created a header file to separate some functions and remove errors/distinguish location of errors
 2. To compile the source code, we need to follow a certain format
-    - gcc -o <final file name> <all c source files to compile and attach>
+    - gcc -o $\lt$final file name$\gt$ $\lt$all c source files to compile and attach$\gt$
     - example: gcc -o main main.c ./include/src/showMainMenu.c
 
     NOTE: not compiling header file because that is already included in showMainMenu.c and it gets compiled, also similar thing will be followed later on to set things up

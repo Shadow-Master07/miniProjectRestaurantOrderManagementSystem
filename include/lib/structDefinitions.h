@@ -16,7 +16,7 @@ typedef struct order
     struct order *next;
 } orderList;
 
-orderList *addOrder(orderList *orderHead);
+orderList *addOrder(orderList *orderHead, int *orderId);
 orderList *deleteOrder(orderList *head);
 void orderListStatus(orderList *orderHead);
 

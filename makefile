@@ -1,4 +1,4 @@
-final: main.o showMenu.o showMainMenu.o
+final: main.o showMenu.o showMainMenu.o structDefinitions.o
 	gcc -o final.exe main.o showMenu.o showMainMenu.o structDefinitions.o
 
 main.o: main.c
@@ -14,4 +14,5 @@ structDefinitions.o: ./include/src/structDefinitions.c ./include/lib/structDefin
 	gcc -c ./include/src/structDefinitions.c
 
 clean:
-	del *.o final.exe
+	del *.o
+	del final.exe

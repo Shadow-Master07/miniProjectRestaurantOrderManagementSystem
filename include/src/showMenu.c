@@ -1,12 +1,11 @@
 #include <stdio.h>
+#include <string.h>
 #include "./../lib/showMenu.h"
 
 void showMenu()
 {
-    printf("\nMenu:\n");
-    printf("1. Burger \n");
-    printf("2. Pizza \n");
-    printf("3. Coldrink\n");
-    printf("4. Masala Dosa \n");
-    printf("5. Chips \n");
+    for(int i = 0; strcmp(Menu[i], "\0"); i++)
+    {
+        printf("%d. %s\n", (i+1), Menu[i]);
+    }
 }

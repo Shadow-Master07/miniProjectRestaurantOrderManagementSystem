@@ -6,7 +6,10 @@
 #include "include/lib/showMainMenu.h"
 #include "include/lib/showMenu.h"
 
+char Menu[6][20] = {"burger", "pizza", "coldrink", "masaladosa", "chips", "\0"};
+
 int orderId = 1;
+
 typedef struct dishes
 {
     int dishNameNo;

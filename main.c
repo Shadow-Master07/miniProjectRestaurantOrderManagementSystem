@@ -26,6 +26,7 @@ typedef struct order
 
 orderList *addOrder(orderList *orderHead)
 {
+
     orderList *newOrder = (orderList *)malloc(sizeof(orderList));
     newOrder->dishHead = NULL;
     newOrder->next = NULL;
@@ -34,14 +35,18 @@ orderList *addOrder(orderList *orderHead)
     dishName *temp = NULL;
     printf("Enter table no:\n");
     scanf("%d", &newOrder->tableNumber);
-    int p = 1;
-    while (p != 0)
+
+    while (1)
     {
+        int p;
         showMenu();
         dishName *newDish = (dishName *)malloc(sizeof(dishName));
-        printf("Enter your dish name no. (Refer to menu) \n");
-        printf("$> ");
-        scanf("%d", &newDish->dishNameNo);
+        printf("Refer the menu and enter the dish name no \n Enter 0 to complete your order \n");
+        scanf("%d", &p);
+        if (p == 0)
+            break;
+        newDish->dishNameNo = p;
+
         newDish->next = NULL;
         if (newOrder->dishHead == NULL)
         {
@@ -53,8 +58,6 @@ orderList *addOrder(orderList *orderHead)
             temp->next = newDish;
             temp = temp->next;
         }
-        printf("Enter 0 to complete order or 1 to continue\n");
-        scanf("%d", &p);
     }
     if (orderHead == NULL)
     {
@@ -68,12 +71,15 @@ orderList *addOrder(orderList *orderHead)
         {
             temp2 = temp2->next;
         }
+
         temp2->next = newOrder;
     }
-    printf("Order id is %d\n", newOrder->ID);
+
+    printf("order id is %d\n", newOrder->ID);
     return orderHead;
 }
 
+// Need to see this
 orderList *deleteOrder(orderList *head)
 {
     orderList *toDelete = head;
@@ -110,26 +116,7 @@ void orderListStatus(orderList *orderHead)
     dishName *temp2 = temp1->dishHead;
     while (temp2 != NULL)
     {
-        if (temp2->dishNameNo == 1)
-        {
-            printf(" Burger \n");
-        }
-        else if (temp2->dishNameNo == 2)
-        {
-            printf(" Pizza \n");
-        }
-        else if (temp2->dishNameNo == 3)
-        {
-            printf(" Coldrink\n");
-        }
-        else if (temp2->dishNameNo == 4)
-        {
-            printf(" Masala Dosa \n");
-        }
-        else
-        {
-            printf(" Chips \n");
-        }
+        printf("%s\n", Menu[temp2->dishNameNo]);
 
         temp2 = temp2->next;
     }

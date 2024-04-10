@@ -146,7 +146,9 @@ void showAllOrders(orderList *orderHead)
 
 int main()
 {
+
     orderList *orderHead = NULL;
+
     int choice;
     while (1)
     {
@@ -159,19 +161,22 @@ int main()
             orderHead = addOrder(orderHead);
             break;
         case 2:
-            orderHead = deleteOrder(orderHead);
+            deleteOrder();
             break;
         case 3:
             showMenu();
             break;
         case 4:
-            orderListStatus(orderHead);
+            orderStatus(orderHead);
             break;
         case 5:
+            showAllOrders(orderHead);
+            break;
+        case 6:
             printf("Bye.\n");
             exit(0);
         default:
-            printf("Invalid choice. Please Enter a number from 1 to 5.\n");
+            printf("Invalid choice. Please enter a number from 1 to 5.\n");
         }
     }
     return 0;

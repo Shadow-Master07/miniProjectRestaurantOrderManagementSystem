@@ -10,7 +10,7 @@ void showMainMenu()
     printf("4. Order Status\n");
     printf("5. Show all order\n");
     printf("6. Exit\n");
-    printf("Enter your choice (1-5)\n");
+    printf("Enter your choice (1-6)\n");
     
     printf("$> ");
 }

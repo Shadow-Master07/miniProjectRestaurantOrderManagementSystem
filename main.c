@@ -54,7 +54,7 @@ int main()
             showMenu();
             break;
         case 4:
-            orderStatus(orderHead);
+            orderListStatus(orderHead);
             break;
         case 5:
             showAllOrders(orderHead);

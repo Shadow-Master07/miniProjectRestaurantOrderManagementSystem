@@ -8,6 +8,7 @@
 #include "include/lib/structDefinitions.h"
 
 int orderID = 1;
+char Menu[6][20] = {"burger", "pizza", "coldrink", "masaladosa", "chips", "\0"};
 
 void showAllOrders(orderList *orderHead)
 {
@@ -48,7 +49,7 @@ int main()
             orderHead = addOrder(orderHead, &orderID);
             break;
         case 2:
-            deleteOrder();
+            deleteOrder(orderHead);
             break;
         case 3:
             showMenu();

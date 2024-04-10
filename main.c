@@ -6,6 +6,7 @@
 #include "include/lib/showMainMenu.h"
 #include "include/lib/showMenu.h"
 #include "include/lib/structDefinitions.h"
+#include "include/lib/showOrdersAndStatus.h"
 
 int orderID = 1;
 char Menu[6][20] = {"burger", "pizza", "coldrink", "masaladosa", "chips", "\0"};

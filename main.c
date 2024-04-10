@@ -122,6 +122,28 @@ void orderListStatus(orderList *orderHead)
     }
 }
 
+void showAllOrders(orderList *orderHead)
+{
+    orderList *temp1 = orderHead;
+    dishName *temp2 = NULL;
+    int i;
+    printf("Printing Order ID:\n");
+    while (temp1 != NULL)
+    {
+        printf("%d:\n", temp1->ID);
+        temp2 = temp1->dishHead;
+        i = 1;
+        while (temp2 != NULL)
+        {
+            printf("    %d. %s\n", i, Menu[temp2->dishNameNo]);
+            temp2 = temp2->next;
+            i++;
+        }
+        temp1 = temp1->next;
+    }
+    printf("Order list completed\n");
+}
+
 int main()
 {
     orderList *orderHead = NULL;

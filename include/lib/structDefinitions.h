@@ -19,5 +19,6 @@ typedef struct order
 orderList *addOrder(orderList *orderHead, int *orderId);
 orderList *deleteOrder(orderList *head);
 void orderListStatus(orderList *orderHead);
+void showAllOrders(orderList *orderHead);
 
 #endif

@@ -16,12 +16,19 @@ orderList *addOrder(orderList *orderHead, int *orderId)
     scanf("%d", &newOrder->tableNumber);
     showMenu();
     printf("Enter your dish name no. (Refer to menu) \n");
-    int p = 1;
-    while (p != 0)
+
+    while (1)
     {
+        int p;
         dishName *newDish = (dishName *)malloc(sizeof(dishName));
-        printf("(Refer to menu) $> ");
-        scanf("%d", &newDish->dishNameNo);
+        printf("(0 to complete) $> ");
+        scanf("%d", &p);
+        if (p == 0)
+        {
+            break;
+        }
+
+        (newDish->dishNameNo) = p - 1;
         newDish->next = NULL;
         if (newOrder->dishHead == NULL)
         {
@@ -33,8 +40,6 @@ orderList *addOrder(orderList *orderHead, int *orderId)
             temp->next = newDish;
             temp = temp->next;
         }
-        printf("Enter 0 to complete order or 1 to continue\n");
-        scanf("%d", &p);
     }
     if (orderHead == NULL)
     {

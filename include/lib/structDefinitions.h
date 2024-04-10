@@ -1,7 +1,7 @@
 #ifndef STRUCTDEFINITIONS_H
 #define STRUCTDEFINITIONS_H
 
-extern int orderId;
+// extern int orderId;
 typedef struct dishes
 {
     int dishNameNo;

@@ -7,6 +7,8 @@
 #include "include/lib/showMenu.h"
 #include "include/lib/structDefinitions.h"
 
+int orderID = 1;
+
 int main()
 {
     orderList *orderHead = NULL;
@@ -19,7 +21,7 @@ int main()
         switch (choice)
         {
         case 1:
-            orderHead = addOrder(orderHead, &orderId);
+            orderHead = addOrder(orderHead, &orderID);
             break;
         case 2:
             orderHead = deleteOrder(orderHead);

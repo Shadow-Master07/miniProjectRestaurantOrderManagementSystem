@@ -45,3 +45,33 @@ void showAllOrders(orderList *orderHead)
     }
     printf("Order list completed\n");
 }
+
+void bookTable()
+{
+    printf("Available tables \n");
+    printf(" --------------\n");
+    for (int i = 0; i < 10; i++)
+    {
+        printf("| ");
+        if (table[i] == 0)
+        {
+            if (i + 1 < 10)
+            {
+                printf("  %d  ", i + 1);
+            }
+            else
+            {
+                printf("  %d ", i + 1);
+            }
+        }
+        if (table[i] == 1)
+        {
+            printf("  X  ");
+        }
+        if (i % 2 == 1)
+        {
+            printf(" |\n");
+        }
+    }
+    printf(" --------------\n");
+}

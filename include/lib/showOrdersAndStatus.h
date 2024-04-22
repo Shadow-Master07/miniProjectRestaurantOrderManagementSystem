@@ -6,6 +6,6 @@
 
 void orderListStatus(orderList *orderHead);
 void showAllOrders(orderList *orderHead);
-
+void bookTable();
 
 #endif

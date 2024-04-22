@@ -9,11 +9,11 @@
 #include "include/lib/showOrdersAndStatus.h"
 
 int orderID = 1;
-char Menu[6][20] = {"burger", "pizza", "coldrink", "masaladosa", "chips", "\0"};
+int table[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+char Menu[6][20] = {"Burger", "Pizza", "Coldrink", "Masala Dosa", "Chips", "\0"};
 
 int main()
 {
-
     orderList *orderHead = NULL;
 
     int choice;
@@ -28,7 +28,7 @@ int main()
             orderHead = addOrder(orderHead, &orderID);
             break;
         case 2:
-            deleteOrder(orderHead);
+            orderHead = deleteOrder(orderHead);
             break;
         case 3:
             showMenu();
@@ -40,7 +40,7 @@ int main()
             showAllOrders(orderHead);
             break;
         case 6:
-            printf("Bye.\n");
+            printf("Thank You...\n");
             exit(0);
         default:
             printf("Invalid choice. Please enter a number from 1 to 6.\n");

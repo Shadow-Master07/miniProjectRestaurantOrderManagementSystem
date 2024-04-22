@@ -22,3 +22,6 @@ showOrdersAndStatus.o: ./include/src/showOrdersAndStatus.c ./include/lib/showOrd
 clean:
 	del *.o
 	del final.exe
+
+run:
+	./final.exe

@@ -24,4 +24,5 @@ clean:
 	del final.exe
 
 run:
+	cls
 	./final.exe

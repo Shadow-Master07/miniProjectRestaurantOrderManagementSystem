@@ -11,6 +11,6 @@ void showMainMenu()
     printf("5. Show all order\n");
     printf("6. Exit\n");
     printf("Enter your choice (1-6)\n");
-    
+
     printf("$> ");
 }

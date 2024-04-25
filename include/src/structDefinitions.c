@@ -89,23 +89,22 @@ orderList *addOrder(orderList *orderHead, int *orderId)
 
 orderList *deleteOrder(orderList *head)
 {
-     if (head == NULL)
+    if (head == NULL)
     {
         printf("No orders to delete.\n");
         return NULL;
     }
 
-
     orderList *toDelete = head;
     head = head->next;
-    
+
     dishName *toDeleteDish = toDelete->dishHead;
     dishName *tempDishDelete;
     printf("Order ID %d is completed\n", toDelete->ID);
     while (toDeleteDish != NULL)
     {
         tempDishDelete = toDeleteDish->next;
-        printf("Dish %d completed\n", toDeleteDish->dishNameNo); // To free memory and comment this out later when publishing
+        printf("Dish %s completed\n", Menu[toDeleteDish->dishNameNo]); // To free memory and comment this out later when publishing
         free(toDeleteDish);
         toDeleteDish = tempDishDelete;
     }

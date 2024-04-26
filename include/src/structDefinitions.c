@@ -11,6 +11,23 @@ orderList *addOrder(orderList *orderHead, int *orderId)
     while (TT == 0) // Need to check how this TT works and probably replace it
     {
         bookTable();
+        // Complete this functionality to show tables that if tables are filled and return to previous menu, fix by circular queue
+
+        int count = 0;
+        for (int i = 0; i < 10; i++)
+        {
+
+            if (table[i] == 1)
+            {
+                count++;
+            }
+        }
+
+        if (count == 10)
+        {
+            printf("All tables are filled\n");
+            return orderHead;
+        }
 
         printf("Enter table no:\n");
         int t;

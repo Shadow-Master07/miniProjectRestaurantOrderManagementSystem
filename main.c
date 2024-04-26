@@ -8,6 +8,8 @@
 #include "include/lib/structDefinitions.h"
 #include "include/lib/showOrdersAndStatus.h"
 
+// Add file handling in this ASAP
+
 int orderID = 1;
 int table[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 char Menu[6][20] = {"Burger", "Pizza", "Coldrink", "Masala Dosa", "Chips", "\0"};

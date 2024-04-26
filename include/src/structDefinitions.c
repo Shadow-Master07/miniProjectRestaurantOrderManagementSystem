@@ -125,6 +125,7 @@ orderList *deleteOrder(orderList *head)
         free(toDeleteDish);
         toDeleteDish = tempDishDelete;
     }
+    table[toDelete->tableNumber - 1] = 0;
     free(toDelete);
     return head;
 }

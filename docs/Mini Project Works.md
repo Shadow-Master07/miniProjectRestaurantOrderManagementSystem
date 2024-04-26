@@ -55,3 +55,11 @@ typedef struct order
 
 3. To arrange all the files and source in a specific format, put everything in include folder, open include and add 2 folders (lib, src). Put header files in lib and C files of same name as in header in src, remaining main file in project (starting location) folder
 
+
+```
+Update few other functionalities if want to
+ - Time of order
+ - Price of orders
+```
+
+
